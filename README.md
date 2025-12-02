@@ -1,6 +1,8 @@
-# Benji Moore Historical Collection CSS Theme
+# Benji Moore Historical Collection CSS Theme 🎨 🕯️
 
-A comprehensive CSS theme featuring 191 colors from the Benjamin Moore Historical Collection — classic paint colors inspired by authentic American architecture and design through the centuries.
+A CSS theme featuring 191 colors from the Benjamin Moore Historical Collection — classic paint colors inspired by authentic American architecture and design through the centuries.
+
+![Benji Moore Historical Collection Screenshot](benji-moore.png)
 
 ## Installation
 
@@ -138,6 +140,6 @@ This theme uses CSS Custom Properties (CSS Variables), which are supported in al
 
 ## License
 
-This CSS theme is free to use in personal and commercial projects.
+This CSS theme is free to use for personal projects.
 
-*Note: Benjamin Moore® and the color names are trademarks of Benjamin Moore & Co. This theme is an independent project and is not affiliated with or endorsed by Benjamin Moore & Co. "Benji Moore" is a playful nickname for this project.*
+*Note: Benjamin Moore® and the color names are trademarks of Benjamin Moore & Co. This theme is an independent project and is not affiliated with or endorsed by Benjamin Moore & Co. "Benji Moore" is a playful nickname for this project. Go buy their paint colors, they're nice.*
