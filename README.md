@@ -29,12 +29,12 @@ All colors are available as CSS custom properties. Use them anywhere in your sty
 ```css
 .header {
   background-color: var(--bm-hc-154-hale-navy);
-  color: var(--bm-hc-158-chantilly-lace);
+  color: var(--bm-hc-84-elmira-white);
 }
 
 .card {
   background-color: var(--bm-hc-172-revere-pewter);
-  border: 1px solid var(--bm-hc-153-pewter);
+  border: 1px solid var(--bm-hc-166-kendall-charcoal);
 }
 
 .accent {
@@ -48,7 +48,7 @@ For convenience, semantic color aliases are included:
 
 ```css
 /* Primary Palette */
---bm-primary-light    /* Palace Pearl */
+--bm-primary-light    /* Castleton Mist */
 --bm-primary          /* Revere Pewter */
 --bm-primary-dark     /* Kendall Charcoal */
 
@@ -95,7 +95,7 @@ The collection is organized into these categories:
 
 | Category | Example Colors |
 |----------|---------------|
-| **Whites & Off-Whites** | Palace Pearl, Chantilly Lace, Indian White |
+| **Whites & Off-Whites** | Standish White, Montgomery White, Elmira White |
 | **Yellows & Golds** | Hawthorne Yellow, Princeton Gold, Adams Gold |
 | **Oranges & Terra Cottas** | Greenfield Pumpkin, Terra Cotta, Lexington Caramel |
 | **Reds & Burgundies** | Heritage Red, Classic Burgundy, Cottage Red |
@@ -120,7 +120,7 @@ Some of the most popular colors in the Historical Collection:
 | Kennebunkport Green | `--bm-hc-76-kennebunkport-green` | `#607858` |
 | Heritage Red | `--bm-hc-181-heritage-red` | `#8a3828` |
 | Princeton Gold | `--bm-hc-14-princeton-gold` | `#c5a855` |
-| Chantilly Lace | `--bm-hc-158-chantilly-lace` | `#f8f8f8` |
+| Newburg Green | `--bm-hc-158-newburg-green` | `#485861` |
 
 ## Demo
 
