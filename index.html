@@ -14,14 +14,14 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      background: var(--bm-hc-1-castleton-mist);
+      background: #F5F5F3;
       color: var(--bm-hc-190-black);
       line-height: 1.6;
     }
 
     header {
       background: var(--bm-hc-154-hale-navy);
-      color: var(--bm-hc-84-elmira-white);
+      color: var(--bm-hc-171-wickham-gray);
       padding: 2rem;
       text-align: center;
     }
@@ -93,26 +93,26 @@
     .color-name {
       font-weight: 600;
       font-size: 0.85rem;
-      color: var(--bm-hc-141-black-river);
+      color: var(--bm-hc-190-black);
       margin-bottom: 0.25rem;
     }
 
     .color-code {
       font-family: 'Monaco', 'Consolas', monospace;
       font-size: 0.75rem;
-      color: var(--bm-hc-153-pewter);
+      color: var(--bm-hc-166-kendall-charcoal);
     }
 
     .color-var {
       font-family: 'Monaco', 'Consolas', monospace;
       font-size: 0.65rem;
-      color: var(--bm-hc-153-pewter);
+      color: var(--bm-hc-166-kendall-charcoal);
       word-break: break-all;
       margin-top: 0.25rem;
     }
 
     .usage-section {
-      background: var(--bm-hc-158-chantilly-lace);
+      background: var(--bm-hc-171-wickham-gray);
       padding: 2rem;
       border-radius: 8px;
       margin: 2rem 0;
@@ -125,14 +125,16 @@
     }
 
     .code-block {
-      background: var(--bm-hc-141-black-river);
-      color: var(--bm-hc-158-chantilly-lace);
+      background: var(--bm-hc-190-black);
+      color: var(--bm-hc-171-wickham-gray);
       padding: 1rem;
       border-radius: 4px;
       font-family: 'Monaco', 'Consolas', monospace;
       font-size: 0.85rem;
       overflow-x: auto;
       margin: 1rem 0;
+      white-space: pre;
+      line-height: 1.5;
     }
 
     .demo-buttons {
@@ -157,34 +159,34 @@
 
     .demo-btn-primary {
       background: var(--bm-hc-154-hale-navy);
-      color: var(--bm-hc-158-chantilly-lace);
+      color: var(--bm-hc-171-wickham-gray);
     }
 
     .demo-btn-secondary {
       background: var(--bm-hc-172-revere-pewter);
-      color: var(--bm-hc-141-black-river);
+      color: var(--bm-hc-190-black);
     }
 
     .demo-btn-accent {
       background: var(--bm-hc-181-heritage-red);
-      color: var(--bm-hc-158-chantilly-lace);
+      color: var(--bm-hc-171-wickham-gray);
     }
 
     .demo-btn-gold {
       background: var(--bm-hc-14-princeton-gold);
-      color: var(--bm-hc-141-black-river);
+      color: var(--bm-hc-190-black);
     }
 
     .demo-btn-green {
-      background: var(--bm-hc-76-kennebunkport-green);
-      color: var(--bm-hc-158-chantilly-lace);
+      background: var(--bm-hc-123-kennebunkport-green);
+      color: var(--bm-hc-171-wickham-gray);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       background: var(--bm-hc-166-kendall-charcoal);
-      color: var(--bm-hc-158-chantilly-lace);
+      color: var(--bm-hc-171-wickham-gray);
       margin-top: 2rem;
     }
 
@@ -198,7 +200,7 @@
     .filter-btn {
       padding: 0.5rem 1rem;
       border: 1px solid var(--bm-hc-172-revere-pewter);
-      background: var(--bm-hc-158-chantilly-lace);
+      background: var(--bm-hc-171-wickham-gray);
       border-radius: 20px;
       cursor: pointer;
       font-size: 0.85rem;
@@ -208,7 +210,7 @@
     .filter-btn:hover,
     .filter-btn.active {
       background: var(--bm-hc-154-hale-navy);
-      color: var(--bm-hc-158-chantilly-lace);
+      color: var(--bm-hc-171-wickham-gray);
       border-color: var(--bm-hc-154-hale-navy);
     }
   </style>
@@ -223,16 +225,14 @@
     <section class="usage-section">
       <h2>How to Use This Theme</h2>
       <p>Include the CSS file in your project and use the CSS custom properties:</p>
-      <div class="code-block">
-&lt;link rel="stylesheet" href="benjamin-moore-historical.css"&gt;
+      <div class="code-block">&lt;link rel="stylesheet" href="benjamin-moore-historical.css"&gt;
 
 /* In your CSS */
 .my-element {
   background-color: var(--bm-hc-172-revere-pewter);
   color: var(--bm-hc-154-hale-navy);
   border: 1px solid var(--bm-hc-153-pewter);
-}
-      </div>
+}</div>
       
       <h3 style="margin-top: 1.5rem;">Demo Buttons</h3>
       <div class="demo-buttons">
@@ -246,7 +246,7 @@
 
     <div class="filter-buttons">
       <button class="filter-btn active" onclick="filterColors('all')">All Colors</button>
-      <button class="filter-btn" onclick="filterColors('whites')">Whites</button>
+      <button class="filter-btn" onclick="filterColors('whites')">Whites & Creams</button>
       <button class="filter-btn" onclick="filterColors('yellows')">Yellows & Golds</button>
       <button class="filter-btn" onclick="filterColors('oranges')">Oranges</button>
       <button class="filter-btn" onclick="filterColors('reds')">Reds</button>
@@ -257,80 +257,93 @@
     </div>
 
     <section data-category="whites">
-      <h2 class="section-title">Whites & Off-Whites</h2>
+      <h2 class="section-title">Whites & Creams</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-1-castleton-mist);"></div><div class="color-info"><div class="color-name">HC-1 Castleton Mist</div><div class="color-code">#f5f3eb</div><div class="color-var">--bm-hc-1-castleton-mist</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-2-beacon-hill-damask);"></div><div class="color-info"><div class="color-name">HC-2 Beacon Hill Damask</div><div class="color-code">#f3f0e7</div><div class="color-var">--bm-hc-2-beacon-hill-damask</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-3-greenmount-silk);"></div><div class="color-info"><div class="color-name">HC-3 Greenmount Silk</div><div class="color-code">#f2f0e5</div><div class="color-var">--bm-hc-3-greenmount-silk</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-12-concord-ivory);"></div><div class="color-info"><div class="color-name">HC-12 Concord Ivory</div><div class="color-code">#f4efe3</div><div class="color-var">--bm-hc-12-concord-ivory</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-27-monterey-white);"></div><div class="color-info"><div class="color-name">HC-27 Monterey White</div><div class="color-code">#e0d4b6</div><div class="color-var">--bm-hc-27-monterey-white</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-32-standish-white);"></div><div class="color-info"><div class="color-name">HC-32 Standish White</div><div class="color-code">#f5f0e6</div><div class="color-var">--bm-hc-32-standish-white</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-33-montgomery-white);"></div><div class="color-info"><div class="color-name">HC-33 Montgomery White</div><div class="color-code">#f4f0e8</div><div class="color-var">--bm-hc-33-montgomery-white</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-84-elmira-white);"></div><div class="color-info"><div class="color-name">HC-84 Elmira White</div><div class="color-code">#f0e8e0</div><div class="color-var">--bm-hc-84-elmira-white</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-27-monterey-white);"></div><div class="color-info"><div class="color-name">HC-27 Monterey White</div><div class="color-code">#E7E4D1</div><div class="color-var">--bm-hc-27-monterey-white</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-33-montgomery-white);"></div><div class="color-info"><div class="color-name">HC-33 Montgomery White</div><div class="color-code">#F1E3C4</div><div class="color-var">--bm-hc-33-montgomery-white</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-32-standish-white);"></div><div class="color-info"><div class="color-name">HC-32 Standish White</div><div class="color-code">#E8DCBD</div><div class="color-var">--bm-hc-32-standish-white</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-84-elmira-white);"></div><div class="color-info"><div class="color-name">HC-84 Elmira White</div><div class="color-code">#DAD3C5</div><div class="color-var">--bm-hc-84-elmira-white</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-174-lancaster-whitewash);"></div><div class="color-info"><div class="color-name">HC-174 Lancaster Whitewash</div><div class="color-code">#E5E1CD</div><div class="color-var">--bm-hc-174-lancaster-whitewash</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-3-greenmount-silk);"></div><div class="color-info"><div class="color-name">HC-3 Greenmount Silk</div><div class="color-code">#EBE4C7</div><div class="color-var">--bm-hc-3-greenmount-silk</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-6-windham-cream);"></div><div class="color-info"><div class="color-name">HC-6 Windham Cream</div><div class="color-code">#F3E9CB</div><div class="color-var">--bm-hc-6-windham-cream</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-29-dunmore-cream);"></div><div class="color-info"><div class="color-name">HC-29 Dunmore Cream</div><div class="color-code">#DBCFAA</div><div class="color-var">--bm-hc-29-dunmore-cream</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-30-philadelphia-cream);"></div><div class="color-info"><div class="color-name">HC-30 Philadelphia Cream</div><div class="color-code">#EADEBB</div><div class="color-var">--bm-hc-30-philadelphia-cream</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-31-waterbury-cream);"></div><div class="color-info"><div class="color-name">HC-31 Waterbury Cream</div><div class="color-code">#DACB9F</div><div class="color-var">--bm-hc-31-waterbury-cream</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-36-hepplewhite-ivory);"></div><div class="color-info"><div class="color-name">HC-36 Hepplewhite Ivory</div><div class="color-code">#F1E5C7</div><div class="color-var">--bm-hc-36-hepplewhite-ivory</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-39-putnam-ivory);"></div><div class="color-info"><div class="color-name">HC-39 Putnam Ivory</div><div class="color-code">#D7CAAE</div><div class="color-var">--bm-hc-39-putnam-ivory</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-12-concord-ivory);"></div><div class="color-info"><div class="color-name">HC-12 Concord Ivory</div><div class="color-code">#E3CE95</div><div class="color-var">--bm-hc-12-concord-ivory</div></div></div>
       </div>
     </section>
 
     <section data-category="yellows">
       <h2 class="section-title">Yellows & Golds</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-4-hawthorne-yellow);"></div><div class="color-info"><div class="color-name">HC-4 Hawthorne Yellow</div><div class="color-code">#f5e9c8</div><div class="color-var">--bm-hc-4-hawthorne-yellow</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-5-weston-flax);"></div><div class="color-info"><div class="color-name">HC-5 Weston Flax</div><div class="color-code">#f3e6c3</div><div class="color-var">--bm-hc-5-weston-flax</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-6-windham-cream);"></div><div class="color-info"><div class="color-name">HC-6 Windham Cream</div><div class="color-code">#f5e8c2</div><div class="color-var">--bm-hc-6-windham-cream</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-7-bryant-gold);"></div><div class="color-info"><div class="color-name">HC-7 Bryant Gold</div><div class="color-code">#e8d5a1</div><div class="color-var">--bm-hc-7-bryant-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-1-castleton-mist);"></div><div class="color-info"><div class="color-name">HC-1 Castleton Mist</div><div class="color-code">#D9D3A6</div><div class="color-var">--bm-hc-1-castleton-mist</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-2-beacon-hill-damask);"></div><div class="color-info"><div class="color-name">HC-2 Beacon Hill Damask</div><div class="color-code">#E3DBB0</div><div class="color-var">--bm-hc-2-beacon-hill-damask</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-4-hawthorne-yellow);"></div><div class="color-info"><div class="color-name">HC-4 Hawthorne Yellow</div><div class="color-code">#F2E2AB</div><div class="color-var">--bm-hc-4-hawthorne-yellow</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-5-weston-flax);"></div><div class="color-info"><div class="color-name">HC-5 Weston Flax</div><div class="color-code">#F0E5BF</div><div class="color-var">--bm-hc-5-weston-flax</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-7-bryant-gold);"></div><div class="color-info"><div class="color-name">HC-7 Bryant Gold</div><div class="color-code">#CEA86A</div><div class="color-var">--bm-hc-7-bryant-gold</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-8-dorset-gold);"></div><div class="color-info"><div class="color-name">HC-8 Dorset Gold</div><div class="color-code">#D7B87C</div><div class="color-var">--bm-hc-8-dorset-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-9-chestertown-buff);"></div><div class="color-info"><div class="color-name">HC-9 Chestertown Buff</div><div class="color-code">#e5d4a6</div><div class="color-var">--bm-hc-9-chestertown-buff</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-10-stuart-gold);"></div><div class="color-info"><div class="color-name">HC-10 Stuart Gold</div><div class="color-code">#d8c07c</div><div class="color-var">--bm-hc-10-stuart-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-11-marblehead-gold);"></div><div class="color-info"><div class="color-name">HC-11 Marblehead Gold</div><div class="color-code">#cdb560</div><div class="color-var">--bm-hc-11-marblehead-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-14-princeton-gold);"></div><div class="color-info"><div class="color-name">HC-14 Princeton Gold</div><div class="color-code">#c5a855</div><div class="color-var">--bm-hc-14-princeton-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-16-livingston-gold);"></div><div class="color-info"><div class="color-name">HC-16 Livingston Gold</div><div class="color-code">#dccfa8</div><div class="color-var">--bm-hc-16-livingston-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-17-summerdale-gold);"></div><div class="color-info"><div class="color-name">HC-17 Summerdale Gold</div><div class="color-code">#d4be7a</div><div class="color-var">--bm-hc-17-summerdale-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-18-adams-gold);"></div><div class="color-info"><div class="color-name">HC-18 Adams Gold</div><div class="color-code">#c6a84f</div><div class="color-var">--bm-hc-18-adams-gold</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-22-blair-gold);"></div><div class="color-info"><div class="color-name">HC-22 Blair Gold</div><div class="color-code">#c8c0a8</div><div class="color-var">--bm-hc-22-blair-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-9-chestertown-buff);"></div><div class="color-info"><div class="color-name">HC-9 Chestertown Buff</div><div class="color-code">#D8C08D</div><div class="color-var">--bm-hc-9-chestertown-buff</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-10-stuart-gold);"></div><div class="color-info"><div class="color-name">HC-10 Stuart Gold</div><div class="color-code">#D8B972</div><div class="color-var">--bm-hc-10-stuart-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-11-marblehead-gold);"></div><div class="color-info"><div class="color-name">HC-11 Marblehead Gold</div><div class="color-code">#DCC582</div><div class="color-var">--bm-hc-11-marblehead-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-13-millington-gold);"></div><div class="color-info"><div class="color-name">HC-13 Millington Gold</div><div class="color-code">#B39D64</div><div class="color-var">--bm-hc-13-millington-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-14-princeton-gold);"></div><div class="color-info"><div class="color-name">HC-14 Princeton Gold</div><div class="color-code">#BEAB74</div><div class="color-var">--bm-hc-14-princeton-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-15-henderson-buff);"></div><div class="color-info"><div class="color-name">HC-15 Henderson Buff</div><div class="color-code">#C8BB8A</div><div class="color-var">--bm-hc-15-henderson-buff</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-16-livingston-gold);"></div><div class="color-info"><div class="color-name">HC-16 Livingston Gold</div><div class="color-code">#9D8C65</div><div class="color-var">--bm-hc-16-livingston-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-17-summerdale-gold);"></div><div class="color-info"><div class="color-name">HC-17 Summerdale Gold</div><div class="color-code">#BDA97A</div><div class="color-var">--bm-hc-17-summerdale-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-18-adams-gold);"></div><div class="color-info"><div class="color-name">HC-18 Adams Gold</div><div class="color-code">#D7CBA1</div><div class="color-var">--bm-hc-18-adams-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-22-blair-gold);"></div><div class="color-info"><div class="color-name">HC-22 Blair Gold</div><div class="color-code">#B8A577</div><div class="color-var">--bm-hc-22-blair-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-24-pittsfield-buff);"></div><div class="color-info"><div class="color-name">HC-24 Pittsfield Buff</div><div class="color-code">#DACDAB</div><div class="color-var">--bm-hc-24-pittsfield-buff</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-35-powell-buff);"></div><div class="color-info"><div class="color-name">HC-35 Powell Buff</div><div class="color-code">#DBCDAB</div><div class="color-var">--bm-hc-35-powell-buff</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-37-mystic-gold);"></div><div class="color-info"><div class="color-name">HC-37 Mystic Gold</div><div class="color-code">#A28961</div><div class="color-var">--bm-hc-37-mystic-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-38-decatur-buff);"></div><div class="color-info"><div class="color-name">HC-38 Decatur Buff</div><div class="color-code">#BDA882</div><div class="color-var">--bm-hc-38-decatur-buff</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-41-richmond-gold);"></div><div class="color-info"><div class="color-name">HC-41 Richmond Gold</div><div class="color-code">#B19369</div><div class="color-var">--bm-hc-41-richmond-gold</div></div></div>
       </div>
     </section>
 
     <section data-category="oranges">
-      <h2 class="section-title">Oranges & Peaches</h2>
+      <h2 class="section-title">Oranges, Peaches & Pinks</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-40-greenfield-pumpkin);"></div><div class="color-info"><div class="color-name">HC-40 Greenfield Pumpkin</div><div class="color-code">#c87838</div><div class="color-var">--bm-hc-40-greenfield-pumpkin</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-42-roxbury-caramel);"></div><div class="color-info"><div class="color-name">HC-42 Roxbury Caramel</div><div class="color-code">#a87840</div><div class="color-var">--bm-hc-42-roxbury-caramel</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-52-ansonia-peach);"></div><div class="color-info"><div class="color-name">HC-52 Ansonia Peach</div><div class="color-code">#e8c8b0</div><div class="color-var">--bm-hc-52-ansonia-peach</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-53-hathaway-peach);"></div><div class="color-info"><div class="color-name">HC-53 Hathaway Peach</div><div class="color-code">#e8c0a8</div><div class="color-var">--bm-hc-53-hathaway-peach</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-54-jumel-peachtone);"></div><div class="color-info"><div class="color-name">HC-54 Jumel Peachtone</div><div class="color-code">#e8c8b8</div><div class="color-var">--bm-hc-54-jumel-peachtone</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-55-winthrop-peach);"></div><div class="color-info"><div class="color-name">HC-55 Winthrop Peach</div><div class="color-code">#e8c8b0</div><div class="color-var">--bm-hc-55-winthrop-peach</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-56-georgetown-pink-beige);"></div><div class="color-info"><div class="color-name">HC-56 Georgetown Pink Beige</div><div class="color-code">#d8b8a0</div><div class="color-var">--bm-hc-56-georgetown-pink-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-57-sheraton-beige);"></div><div class="color-info"><div class="color-name">HC-57 Sheraton Beige</div><div class="color-code">#c8a888</div><div class="color-var">--bm-hc-57-sheraton-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-58-chippendale-rosetone);"></div><div class="color-info"><div class="color-name">HC-58 Chippendale Rosetone</div><div class="color-code">#c89888</div><div class="color-var">--bm-hc-58-chippendale-rosetone</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-59-odessa-pink);"></div><div class="color-info"><div class="color-name">HC-59 Odessa Pink</div><div class="color-code">#d8a8a0</div><div class="color-var">--bm-hc-59-odessa-pink</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-60-queen-anne-pink);"></div><div class="color-info"><div class="color-name">HC-60 Queen Anne Pink</div><div class="color-code">#c89090</div><div class="color-var">--bm-hc-60-queen-anne-pink</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-63-monticello-rose);"></div><div class="color-info"><div class="color-name">HC-63 Monticello Rose</div><div class="color-code">#c89888</div><div class="color-var">--bm-hc-63-monticello-rose</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-40-greenfield-pumpkin);"></div><div class="color-info"><div class="color-name">HC-40 Greenfield Pumpkin</div><div class="color-code">#95734F</div><div class="color-var">--bm-hc-40-greenfield-pumpkin</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-42-roxbury-caramel);"></div><div class="color-info"><div class="color-name">HC-42 Roxbury Caramel</div><div class="color-code">#C4A47E</div><div class="color-var">--bm-hc-42-roxbury-caramel</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-52-ansonia-peach);"></div><div class="color-info"><div class="color-name">HC-52 Ansonia Peach</div><div class="color-code">#DFB58E</div><div class="color-var">--bm-hc-52-ansonia-peach</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-53-hathaway-peach);"></div><div class="color-info"><div class="color-name">HC-53 Hathaway Peach</div><div class="color-code">#EBCBAB</div><div class="color-var">--bm-hc-53-hathaway-peach</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-54-jumel-peachtone);"></div><div class="color-info"><div class="color-name">HC-54 Jumel Peachtone</div><div class="color-code">#ECD6BB</div><div class="color-var">--bm-hc-54-jumel-peachtone</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-55-winthrop-peach);"></div><div class="color-info"><div class="color-name">HC-55 Winthrop Peach</div><div class="color-code">#C7AA93</div><div class="color-var">--bm-hc-55-winthrop-peach</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-56-georgetown-pink-beige);"></div><div class="color-info"><div class="color-name">HC-56 Georgetown Pink Beige</div><div class="color-code">#DAC2AE</div><div class="color-var">--bm-hc-56-georgetown-pink-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-57-sheraton-beige);"></div><div class="color-info"><div class="color-name">HC-57 Sheraton Beige</div><div class="color-code">#E6D4BE</div><div class="color-var">--bm-hc-57-sheraton-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-58-chippendale-rosetone);"></div><div class="color-info"><div class="color-name">HC-58 Chippendale Rosetone</div><div class="color-code">#D0B4A5</div><div class="color-var">--bm-hc-58-chippendale-rosetone</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-59-odessa-pink);"></div><div class="color-info"><div class="color-name">HC-59 Odessa Pink</div><div class="color-code">#DEC9BC</div><div class="color-var">--bm-hc-59-odessa-pink</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-60-queen-anne-pink);"></div><div class="color-info"><div class="color-name">HC-60 Queen Anne Pink</div><div class="color-code">#EDDAC8</div><div class="color-var">--bm-hc-60-queen-anne-pink</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-63-monticello-rose);"></div><div class="color-info"><div class="color-name">HC-63 Monticello Rose</div><div class="color-code">#CBAFA1</div><div class="color-var">--bm-hc-63-monticello-rose</div></div></div>
       </div>
     </section>
 
     <section data-category="reds">
-      <h2 class="section-title">Reds & Browns</h2>
+      <h2 class="section-title">Reds, Burgundies & Browns</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-49-mayflower-red);"></div><div class="color-info"><div class="color-name">HC-49 Mayflower Red</div><div class="color-code">#a04030</div><div class="color-var">--bm-hc-49-mayflower-red</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-50-georgian-brick);"></div><div class="color-info"><div class="color-name">HC-50 Georgian Brick</div><div class="color-code">#984840</div><div class="color-var">--bm-hc-50-georgian-brick</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-51-audubon-russet);"></div><div class="color-info"><div class="color-name">HC-51 Audubon Russet</div><div class="color-code">#8a5040</div><div class="color-var">--bm-hc-51-audubon-russet</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-61-new-london-burgundy);"></div><div class="color-info"><div class="color-name">HC-61 New London Burgundy</div><div class="color-code">#703030</div><div class="color-var">--bm-hc-61-new-london-burgundy</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-62-somerville-red);"></div><div class="color-info"><div class="color-name">HC-62 Somerville Red</div><div class="color-code">#803838</div><div class="color-var">--bm-hc-62-somerville-red</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-64-townsend-harbor-brown);"></div><div class="color-info"><div class="color-name">HC-64 Townsend Harbor Brown</div><div class="color-code">#785040</div><div class="color-var">--bm-hc-64-townsend-harbor-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-65-hodley-red);"></div><div class="color-info"><div class="color-name">HC-65 Hodley Red</div><div class="color-code">#804038</div><div class="color-var">--bm-hc-65-hodley-red</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-66-garrison-red);"></div><div class="color-info"><div class="color-name">HC-66 Garrison Red</div><div class="color-code">#783830</div><div class="color-var">--bm-hc-66-garrison-red</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-67-clinton-brown);"></div><div class="color-info"><div class="color-name">HC-67 Clinton Brown</div><div class="color-code">#906850</div><div class="color-var">--bm-hc-67-clinton-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-68-middlebury-brown);"></div><div class="color-info"><div class="color-name">HC-68 Middlebury Brown</div><div class="color-code">#987058</div><div class="color-var">--bm-hc-68-middlebury-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-69-whitall-brown);"></div><div class="color-info"><div class="color-name">HC-69 Whitall Brown</div><div class="color-code">#786050</div><div class="color-var">--bm-hc-69-whitall-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-70-van-buren-brown);"></div><div class="color-info"><div class="color-name">HC-70 Van Buren Brown</div><div class="color-code">#705848</div><div class="color-var">--bm-hc-70-van-buren-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-71-hasbrouck-brown);"></div><div class="color-info"><div class="color-name">HC-71 Hasbrouck Brown</div><div class="color-code">#705848</div><div class="color-var">--bm-hc-71-hasbrouck-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-72-branchport-brown);"></div><div class="color-info"><div class="color-name">HC-72 Branchport Brown</div><div class="color-code">#785840</div><div class="color-var">--bm-hc-72-branchport-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-73-plymouth-brown);"></div><div class="color-info"><div class="color-name">HC-73 Plymouth Brown</div><div class="color-code">#685040</div><div class="color-var">--bm-hc-73-plymouth-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-74-valley-forge-brown);"></div><div class="color-info"><div class="color-name">HC-74 Valley Forge Brown</div><div class="color-code">#604838</div><div class="color-var">--bm-hc-74-valley-forge-brown</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-75-maryville-brown);"></div><div class="color-info"><div class="color-name">HC-75 Maryville Brown</div><div class="color-code">#706050</div><div class="color-var">--bm-hc-75-maryville-brown</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-181-heritage-red);"></div><div class="color-info"><div class="color-name">HC-181 Heritage Red</div><div class="color-code">#8C1F1D</div><div class="color-var">--bm-hc-181-heritage-red</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-182-classic-burgundy);"></div><div class="color-info"><div class="color-name">HC-182 Classic Burgundy</div><div class="color-code">#601F1D</div><div class="color-var">--bm-hc-182-classic-burgundy</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-183-country-redwood);"></div><div class="color-info"><div class="color-name">HC-183 Country Redwood</div><div class="color-code">#6D3127</div><div class="color-var">--bm-hc-183-country-redwood</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-184-cottage-red);"></div><div class="color-info"><div class="color-name">HC-184 Cottage Red</div><div class="color-code">#5F2E28</div><div class="color-var">--bm-hc-184-cottage-red</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-49-mayflower-red);"></div><div class="color-info"><div class="color-name">HC-49 Mayflower Red</div><div class="color-code">#966551</div><div class="color-var">--bm-hc-49-mayflower-red</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-50-georgian-brick);"></div><div class="color-info"><div class="color-name">HC-50 Georgian Brick</div><div class="color-code">#8F5C4D</div><div class="color-var">--bm-hc-50-georgian-brick</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-51-audubon-russet);"></div><div class="color-info"><div class="color-name">HC-51 Audubon Russet</div><div class="color-code">#A56E59</div><div class="color-var">--bm-hc-51-audubon-russet</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-61-new-london-burgundy);"></div><div class="color-info"><div class="color-name">HC-61 New London Burgundy</div><div class="color-code">#6F4D4F</div><div class="color-var">--bm-hc-61-new-london-burgundy</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-62-somerville-red);"></div><div class="color-info"><div class="color-name">HC-62 Somerville Red</div><div class="color-code">#936F6C</div><div class="color-var">--bm-hc-62-somerville-red</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-64-townsend-harbor-brown);"></div><div class="color-info"><div class="color-name">HC-64 Townsend Harbor Brown</div><div class="color-code">#5F4644</div><div class="color-var">--bm-hc-64-townsend-harbor-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-65-hodley-red);"></div><div class="color-info"><div class="color-name">HC-65 Hodley Red</div><div class="color-code">#714F4B</div><div class="color-var">--bm-hc-65-hodley-red</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-66-garrison-red);"></div><div class="color-info"><div class="color-name">HC-66 Garrison Red</div><div class="color-code">#855B57</div><div class="color-var">--bm-hc-66-garrison-red</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-67-clinton-brown);"></div><div class="color-info"><div class="color-name">HC-67 Clinton Brown</div><div class="color-code">#62564B</div><div class="color-var">--bm-hc-67-clinton-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-68-middlebury-brown);"></div><div class="color-info"><div class="color-name">HC-68 Middlebury Brown</div><div class="color-code">#665A4F</div><div class="color-var">--bm-hc-68-middlebury-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-69-whitall-brown);"></div><div class="color-info"><div class="color-name">HC-69 Whitall Brown</div><div class="color-code">#796D5F</div><div class="color-var">--bm-hc-69-whitall-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-70-van-buren-brown);"></div><div class="color-info"><div class="color-name">HC-70 Van Buren Brown</div><div class="color-code">#5C5047</div><div class="color-var">--bm-hc-70-van-buren-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-71-hasbrouck-brown);"></div><div class="color-info"><div class="color-name">HC-71 Hasbrouck Brown</div><div class="color-code">#614D44</div><div class="color-var">--bm-hc-71-hasbrouck-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-72-branchport-brown);"></div><div class="color-info"><div class="color-name">HC-72 Branchport Brown</div><div class="color-code">#5E524B</div><div class="color-var">--bm-hc-72-branchport-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-73-plymouth-brown);"></div><div class="color-info"><div class="color-name">HC-73 Plymouth Brown</div><div class="color-code">#7B6751</div><div class="color-var">--bm-hc-73-plymouth-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-74-valley-forge-brown);"></div><div class="color-info"><div class="color-name">HC-74 Valley Forge Brown</div><div class="color-code">#8D7358</div><div class="color-var">--bm-hc-74-valley-forge-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-75-maryville-brown);"></div><div class="color-info"><div class="color-name">HC-75 Maryville Brown</div><div class="color-code">#97785B</div><div class="color-var">--bm-hc-75-maryville-brown</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-185-tudor-brown);"></div><div class="color-info"><div class="color-name">HC-185 Tudor Brown</div><div class="color-code">#4C3B31</div><div class="color-var">--bm-hc-185-tudor-brown</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-186-charleston-brown);"></div><div class="color-info"><div class="color-name">HC-186 Charleston Brown</div><div class="color-code">#6F533D</div><div class="color-var">--bm-hc-186-charleston-brown</div></div></div>
       </div>
@@ -339,132 +352,146 @@
     <section data-category="greens">
       <h2 class="section-title">Greens</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-100-gloucester-sage);"></div><div class="color-info"><div class="color-name">HC-100 Gloucester Sage</div><div class="color-code">#8a9470</div><div class="color-var">--bm-hc-100-gloucester-sage</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-109-sussex-green);"></div><div class="color-info"><div class="color-name">HC-109 Sussex Green</div><div class="color-code">#607058</div><div class="color-var">--bm-hc-109-sussex-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-110-wethersfield-moss);"></div><div class="color-info"><div class="color-name">HC-110 Wethersfield Moss</div><div class="color-code">#707860</div><div class="color-var">--bm-hc-110-wethersfield-moss</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-112-tate-olive);"></div><div class="color-info"><div class="color-name">HC-112 Tate Olive</div><div class="color-code">#808858</div><div class="color-var">--bm-hc-112-tate-olive</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-113-louisburg-green);"></div><div class="color-info"><div class="color-name">HC-113 Louisburg Green</div><div class="color-code">#688068</div><div class="color-var">--bm-hc-113-louisburg-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-114-saybrook-sage);"></div><div class="color-info"><div class="color-name">HC-114 Saybrook Sage</div><div class="color-code">#909880</div><div class="color-var">--bm-hc-114-saybrook-sage</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-115-georgian-green);"></div><div class="color-info"><div class="color-name">HC-115 Georgian Green</div><div class="color-code">#788860</div><div class="color-var">--bm-hc-115-georgian-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-116-guilford-green);"></div><div class="color-info"><div class="color-name">HC-116 Guilford Green</div><div class="color-code">#a8b8a0</div><div class="color-var">--bm-hc-116-guilford-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-117-hancock-green);"></div><div class="color-info"><div class="color-name">HC-117 Hancock Green</div><div class="color-code">#3a4a40</div><div class="color-var">--bm-hc-117-hancock-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-118-sherwood-green);"></div><div class="color-info"><div class="color-name">HC-118 Sherwood Green</div><div class="color-code">#506850</div><div class="color-var">--bm-hc-118-sherwood-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-119-kittery-point-green);"></div><div class="color-info"><div class="color-name">HC-119 Kittery Point Green</div><div class="color-code">#607858</div><div class="color-var">--bm-hc-119-kittery-point-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-120-van-alen-green);"></div><div class="color-info"><div class="color-name">HC-120 Van Alen Green</div><div class="color-code">#506048</div><div class="color-var">--bm-hc-120-van-alen-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-121-peale-green);"></div><div class="color-info"><div class="color-name">HC-121 Peale Green</div><div class="color-code">#708868</div><div class="color-var">--bm-hc-121-peale-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-122-great-barrington-green);"></div><div class="color-info"><div class="color-name">HC-122 Great Barrington Green</div><div class="color-code">#607058</div><div class="color-var">--bm-hc-122-great-barrington-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-123-kennebunkport-green);"></div><div class="color-info"><div class="color-name">HC-123 Kennebunkport Green</div><div class="color-code">#607858</div><div class="color-var">--bm-hc-123-kennebunkport-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-124-caldwell-green);"></div><div class="color-info"><div class="color-name">HC-124 Caldwell Green</div><div class="color-code">#485840</div><div class="color-var">--bm-hc-124-caldwell-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-125-cushing-green);"></div><div class="color-info"><div class="color-name">HC-125 Cushing Green</div><div class="color-code">#586850</div><div class="color-var">--bm-hc-125-cushing-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-126-avon-green);"></div><div class="color-info"><div class="color-name">HC-126 Avon Green</div><div class="color-code">#708870</div><div class="color-var">--bm-hc-126-avon-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-127-fairmont-green);"></div><div class="color-info"><div class="color-name">HC-127 Fairmont Green</div><div class="color-code">#809080</div><div class="color-var">--bm-hc-127-fairmont-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-128-clearspring-green);"></div><div class="color-info"><div class="color-name">HC-128 Clearspring Green</div><div class="color-code">#90a090</div><div class="color-var">--bm-hc-128-clearspring-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-129-southfield-green);"></div><div class="color-info"><div class="color-name">HC-129 Southfield Green</div><div class="color-code">#688068</div><div class="color-var">--bm-hc-129-southfield-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-130-webster-green);"></div><div class="color-info"><div class="color-name">HC-130 Webster Green</div><div class="color-code">#708878</div><div class="color-var">--bm-hc-130-webster-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-131-lehigh-green);"></div><div class="color-info"><div class="color-name">HC-131 Lehigh Green</div><div class="color-code">#607060</div><div class="color-var">--bm-hc-131-lehigh-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-132-harrisburg-green);"></div><div class="color-info"><div class="color-name">HC-132 Harrisburg Green</div><div class="color-code">#485848</div><div class="color-var">--bm-hc-132-harrisburg-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-133-yorktowne-green);"></div><div class="color-info"><div class="color-name">HC-133 Yorktowne Green</div><div class="color-code">#405040</div><div class="color-var">--bm-hc-133-yorktowne-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-134-tarrytown-green);"></div><div class="color-info"><div class="color-name">HC-134 Tarrytown Green</div><div class="color-code">#384838</div><div class="color-var">--bm-hc-134-tarrytown-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-135-lafayette-green);"></div><div class="color-info"><div class="color-name">HC-135 Lafayette Green</div><div class="color-code">#506050</div><div class="color-var">--bm-hc-135-lafayette-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-136-waterbury-green);"></div><div class="color-info"><div class="color-name">HC-136 Waterbury Green</div><div class="color-code">#607860</div><div class="color-var">--bm-hc-136-waterbury-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-139-salisbury-green);"></div><div class="color-info"><div class="color-name">HC-139 Salisbury Green</div><div class="color-code">#708878</div><div class="color-var">--bm-hc-139-salisbury-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-140-prescott-green);"></div><div class="color-info"><div class="color-name">HC-140 Prescott Green</div><div class="color-code">#607060</div><div class="color-var">--bm-hc-140-prescott-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-141-hollingsworth-green);"></div><div class="color-info"><div class="color-name">HC-141 Hollingsworth Green</div><div class="color-code">#688878</div><div class="color-var">--bm-hc-141-hollingsworth-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-157-narragansett-green);"></div><div class="color-info"><div class="color-name">HC-157 Narragansett Green</div><div class="color-code">#5A6B5E</div><div class="color-var">--bm-hc-157-narragansett-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-158-newburg-green);"></div><div class="color-info"><div class="color-name">HC-158 Newburg Green</div><div class="color-code">#5B6B5A</div><div class="color-var">--bm-hc-158-newburg-green</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-187-black-forest-green);"></div><div class="color-info"><div class="color-name">HC-187 Black Forest Green</div><div class="color-code">#262E2C</div><div class="color-var">--bm-hc-187-black-forest-green</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-188-essex-green);"></div><div class="color-info"><div class="color-name">HC-188 Essex Green</div><div class="color-code">#2A362F</div><div class="color-var">--bm-hc-188-essex-green</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-189-chrome-green);"></div><div class="color-info"><div class="color-name">HC-189 Chrome Green</div><div class="color-code">#1D402F</div><div class="color-var">--bm-hc-189-chrome-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-189-chrome-green);"></div><div class="color-info"><div class="color-name">HC-189 Chrome Green</div><div class="color-code">#1C3E2E</div><div class="color-var">--bm-hc-189-chrome-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-117-hancock-green);"></div><div class="color-info"><div class="color-name">HC-117 Hancock Green</div><div class="color-code">#3A4A40</div><div class="color-var">--bm-hc-117-hancock-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-134-tarrytown-green);"></div><div class="color-info"><div class="color-name">HC-134 Tarrytown Green</div><div class="color-code">#455652</div><div class="color-var">--bm-hc-134-tarrytown-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-133-yorktowne-green);"></div><div class="color-info"><div class="color-name">HC-133 Yorktowne Green</div><div class="color-code">#4A595C</div><div class="color-var">--bm-hc-133-yorktowne-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-124-caldwell-green);"></div><div class="color-info"><div class="color-name">HC-124 Caldwell Green</div><div class="color-code">#485840</div><div class="color-var">--bm-hc-124-caldwell-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-135-lafayette-green);"></div><div class="color-info"><div class="color-name">HC-135 Lafayette Green</div><div class="color-code">#4D5F56</div><div class="color-var">--bm-hc-135-lafayette-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-120-van-alen-green);"></div><div class="color-info"><div class="color-name">HC-120 Van Alen Green</div><div class="color-code">#506048</div><div class="color-var">--bm-hc-120-van-alen-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-118-sherwood-green);"></div><div class="color-info"><div class="color-name">HC-118 Sherwood Green</div><div class="color-code">#506850</div><div class="color-var">--bm-hc-118-sherwood-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-125-cushing-green);"></div><div class="color-info"><div class="color-name">HC-125 Cushing Green</div><div class="color-code">#586850</div><div class="color-var">--bm-hc-125-cushing-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-109-sussex-green);"></div><div class="color-info"><div class="color-name">HC-109 Sussex Green</div><div class="color-code">#7F7C67</div><div class="color-var">--bm-hc-109-sussex-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-119-kittery-point-green);"></div><div class="color-info"><div class="color-name">HC-119 Kittery Point Green</div><div class="color-code">#607858</div><div class="color-var">--bm-hc-119-kittery-point-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-122-great-barrington-green);"></div><div class="color-info"><div class="color-name">HC-122 Great Barrington Green</div><div class="color-code">#607058</div><div class="color-var">--bm-hc-122-great-barrington-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-123-kennebunkport-green);"></div><div class="color-info"><div class="color-name">HC-123 Kennebunkport Green</div><div class="color-code">#607858</div><div class="color-var">--bm-hc-123-kennebunkport-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-113-louisburg-green);"></div><div class="color-info"><div class="color-name">HC-113 Louisburg Green</div><div class="color-code">#688068</div><div class="color-var">--bm-hc-113-louisburg-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-127-fairmont-green);"></div><div class="color-info"><div class="color-name">HC-127 Fairmont Green</div><div class="color-code">#6A836B</div><div class="color-var">--bm-hc-127-fairmont-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-130-webster-green);"></div><div class="color-info"><div class="color-name">HC-130 Webster Green</div><div class="color-code">#6A7F6E</div><div class="color-var">--bm-hc-130-webster-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-121-peale-green);"></div><div class="color-info"><div class="color-name">HC-121 Peale Green</div><div class="color-code">#708868</div><div class="color-var">--bm-hc-121-peale-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-126-avon-green);"></div><div class="color-info"><div class="color-name">HC-126 Avon Green</div><div class="color-code">#708870</div><div class="color-var">--bm-hc-126-avon-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-136-waterbury-green);"></div><div class="color-info"><div class="color-name">HC-136 Waterbury Green</div><div class="color-code">#749087</div><div class="color-var">--bm-hc-136-waterbury-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-100-gloucester-sage);"></div><div class="color-info"><div class="color-name">HC-100 Gloucester Sage</div><div class="color-code">#7A7667</div><div class="color-var">--bm-hc-100-gloucester-sage</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-115-georgian-green);"></div><div class="color-info"><div class="color-name">HC-115 Georgian Green</div><div class="color-code">#788860</div><div class="color-var">--bm-hc-115-georgian-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-131-lehigh-green);"></div><div class="color-info"><div class="color-name">HC-131 Lehigh Green</div><div class="color-code">#7B947F</div><div class="color-var">--bm-hc-131-lehigh-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-128-clearspring-green);"></div><div class="color-info"><div class="color-name">HC-128 Clearspring Green</div><div class="color-code">#7D9982</div><div class="color-var">--bm-hc-128-clearspring-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-112-tate-olive);"></div><div class="color-info"><div class="color-name">HC-112 Tate Olive</div><div class="color-code">#818069</div><div class="color-var">--bm-hc-112-tate-olive</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-110-wethersfield-moss);"></div><div class="color-info"><div class="color-name">HC-110 Wethersfield Moss</div><div class="color-code">#8F8D74</div><div class="color-var">--bm-hc-110-wethersfield-moss</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-129-southfield-green);"></div><div class="color-info"><div class="color-name">HC-129 Southfield Green</div><div class="color-code">#8EAA95</div><div class="color-var">--bm-hc-129-southfield-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-114-saybrook-sage);"></div><div class="color-info"><div class="color-name">HC-114 Saybrook Sage</div><div class="color-code">#909880</div><div class="color-var">--bm-hc-114-saybrook-sage</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-132-harrisburg-green);"></div><div class="color-info"><div class="color-name">HC-132 Harrisburg Green</div><div class="color-code">#91AA99</div><div class="color-var">--bm-hc-132-harrisburg-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-116-guilford-green);"></div><div class="color-info"><div class="color-name">HC-116 Guilford Green</div><div class="color-code">#A8B8A0</div><div class="color-var">--bm-hc-116-guilford-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-139-salisbury-green);"></div><div class="color-info"><div class="color-name">HC-139 Salisbury Green</div><div class="color-code">#B2BAA6</div><div class="color-var">--bm-hc-139-salisbury-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-140-prescott-green);"></div><div class="color-info"><div class="color-name">HC-140 Prescott Green</div><div class="color-code">#C0C9B9</div><div class="color-var">--bm-hc-140-prescott-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-141-hollingsworth-green);"></div><div class="color-info"><div class="color-name">HC-141 Hollingsworth Green</div><div class="color-code">#CDD4C5</div><div class="color-var">--bm-hc-141-hollingsworth-green</div></div></div>
       </div>
     </section>
 
     <section data-category="blues">
       <h2 class="section-title">Blues</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-111-nantucket-gray);"></div><div class="color-info"><div class="color-name">HC-111 Nantucket Gray</div><div class="color-code">#8898a0</div><div class="color-var">--bm-hc-111-nantucket-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-137-mill-springs-blue);"></div><div class="color-info"><div class="color-name">HC-137 Mill Springs Blue</div><div class="color-code">#708890</div><div class="color-var">--bm-hc-137-mill-springs-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-138-covington-blue);"></div><div class="color-info"><div class="color-name">HC-138 Covington Blue</div><div class="color-code">#8098a0</div><div class="color-var">--bm-hc-138-covington-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-142-stratton-blue);"></div><div class="color-info"><div class="color-name">HC-142 Stratton Blue</div><div class="color-code">#607078</div><div class="color-var">--bm-hc-142-stratton-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-143-wythe-blue);"></div><div class="color-info"><div class="color-name">HC-143 Wythe Blue</div><div class="color-code">#a8b8b8</div><div class="color-var">--bm-hc-143-wythe-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-144-palladian-blue);"></div><div class="color-info"><div class="color-name">HC-144 Palladian Blue</div><div class="color-code">#b8c8c8</div><div class="color-var">--bm-hc-144-palladian-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-145-van-courtland-blue);"></div><div class="color-info"><div class="color-name">HC-145 Van Courtland Blue</div><div class="color-code">#708090</div><div class="color-var">--bm-hc-145-van-courtland-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-146-wedgewood-gray);"></div><div class="color-info"><div class="color-name">HC-146 Wedgewood Gray</div><div class="color-code">#788888</div><div class="color-var">--bm-hc-146-wedgewood-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-147-woodlawn-blue);"></div><div class="color-info"><div class="color-name">HC-147 Woodlawn Blue</div><div class="color-code">#90a0a8</div><div class="color-var">--bm-hc-147-woodlawn-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-148-jamestown-blue);"></div><div class="color-info"><div class="color-name">HC-148 Jamestown Blue</div><div class="color-code">#889FA5</div><div class="color-var">--bm-hc-148-jamestown-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-149-buxton-blue);"></div><div class="color-info"><div class="color-name">HC-149 Buxton Blue</div><div class="color-code">#A2B5B9</div><div class="color-var">--bm-hc-149-buxton-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-150-yarmouth-blue);"></div><div class="color-info"><div class="color-name">HC-150 Yarmouth Blue</div><div class="color-code">#a0b8c0</div><div class="color-var">--bm-hc-150-yarmouth-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-151-buckland-blue);"></div><div class="color-info"><div class="color-name">HC-151 Buckland Blue</div><div class="color-code">#708898</div><div class="color-var">--bm-hc-151-buckland-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-152-whipple-blue);"></div><div class="color-info"><div class="color-name">HC-152 Whipple Blue</div><div class="color-code">#8898a0</div><div class="color-var">--bm-hc-152-whipple-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-153-marlboro-blue);"></div><div class="color-info"><div class="color-name">HC-153 Marlboro Blue</div><div class="color-code">#607080</div><div class="color-var">--bm-hc-153-marlboro-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-154-hale-navy);"></div><div class="color-info"><div class="color-name">HC-154 Hale Navy</div><div class="color-code">#384858</div><div class="color-var">--bm-hc-154-hale-navy</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-155-newburyport-blue);"></div><div class="color-info"><div class="color-name">HC-155 Newburyport Blue</div><div class="color-code">#405868</div><div class="color-var">--bm-hc-155-newburyport-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-156-van-deusen-blue);"></div><div class="color-info"><div class="color-name">HC-156 Van Deusen Blue</div><div class="color-code">#405060</div><div class="color-var">--bm-hc-156-van-deusen-blue</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-159-philipsburg-blue);"></div><div class="color-info"><div class="color-name">HC-159 Philipsburg Blue</div><div class="color-code">#6E8085</div><div class="color-var">--bm-hc-159-philipsburg-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-154-hale-navy);"></div><div class="color-info"><div class="color-name">HC-154 Hale Navy</div><div class="color-code">#444B55</div><div class="color-var">--bm-hc-154-hale-navy</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-157-narragansett-green);"></div><div class="color-info"><div class="color-name">HC-157 Narragansett Green</div><div class="color-code">#465154</div><div class="color-var">--bm-hc-157-narragansett-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-158-newburg-green);"></div><div class="color-info"><div class="color-name">HC-158 Newburg Green</div><div class="color-code">#485861</div><div class="color-var">--bm-hc-158-newburg-green</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-155-newburyport-blue);"></div><div class="color-info"><div class="color-name">HC-155 Newburyport Blue</div><div class="color-code">#495564</div><div class="color-var">--bm-hc-155-newburyport-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-156-van-deusen-blue);"></div><div class="color-info"><div class="color-name">HC-156 Van Deusen Blue</div><div class="color-code">#4C5A6C</div><div class="color-var">--bm-hc-156-van-deusen-blue</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-191-hamilton-blue);"></div><div class="color-info"><div class="color-name">HC-191 Hamilton Blue</div><div class="color-code">#64757E</div><div class="color-var">--bm-hc-191-hamilton-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-159-philipsburg-blue);"></div><div class="color-info"><div class="color-name">HC-159 Philipsburg Blue</div><div class="color-code">#667784</div><div class="color-var">--bm-hc-159-philipsburg-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-151-buckland-blue);"></div><div class="color-info"><div class="color-name">HC-151 Buckland Blue</div><div class="color-code">#698595</div><div class="color-var">--bm-hc-151-buckland-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-152-whipple-blue);"></div><div class="color-info"><div class="color-name">HC-152 Whipple Blue</div><div class="color-code">#7E9DAE</div><div class="color-var">--bm-hc-152-whipple-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-137-mill-springs-blue);"></div><div class="color-info"><div class="color-name">HC-137 Mill Springs Blue</div><div class="color-code">#84A09A</div><div class="color-var">--bm-hc-137-mill-springs-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-148-jamestown-blue);"></div><div class="color-info"><div class="color-name">HC-148 Jamestown Blue</div><div class="color-code">#889FA5</div><div class="color-var">--bm-hc-148-jamestown-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-145-van-courtland-blue);"></div><div class="color-info"><div class="color-name">HC-145 Van Courtland Blue</div><div class="color-code">#89989D</div><div class="color-var">--bm-hc-145-van-courtland-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-142-stratton-blue);"></div><div class="color-info"><div class="color-name">HC-142 Stratton Blue</div><div class="color-code">#97A8A0</div><div class="color-var">--bm-hc-142-stratton-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-138-covington-blue);"></div><div class="color-info"><div class="color-name">HC-138 Covington Blue</div><div class="color-code">#9AB4AC</div><div class="color-var">--bm-hc-138-covington-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-153-marlboro-blue);"></div><div class="color-info"><div class="color-name">HC-153 Marlboro Blue</div><div class="color-code">#9CB8C4</div><div class="color-var">--bm-hc-153-marlboro-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-149-buxton-blue);"></div><div class="color-info"><div class="color-name">HC-149 Buxton Blue</div><div class="color-code">#A2B5B9</div><div class="color-var">--bm-hc-149-buxton-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-111-nantucket-gray);"></div><div class="color-info"><div class="color-name">HC-111 Nantucket Gray</div><div class="color-code">#AEAB95</div><div class="color-var">--bm-hc-111-nantucket-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-143-wythe-blue);"></div><div class="color-info"><div class="color-name">HC-143 Wythe Blue</div><div class="color-code">#AEBDB5</div><div class="color-var">--bm-hc-143-wythe-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-146-wedgewood-gray);"></div><div class="color-info"><div class="color-name">HC-146 Wedgewood Gray</div><div class="color-code">#B0BEBD</div><div class="color-var">--bm-hc-146-wedgewood-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-150-yarmouth-blue);"></div><div class="color-info"><div class="color-name">HC-150 Yarmouth Blue</div><div class="color-code">#B9C7C9</div><div class="color-var">--bm-hc-150-yarmouth-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-144-palladian-blue);"></div><div class="color-info"><div class="color-name">HC-144 Palladian Blue</div><div class="color-code">#C4D1C9</div><div class="color-var">--bm-hc-144-palladian-blue</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-147-woodlawn-blue);"></div><div class="color-info"><div class="color-name">HC-147 Woodlawn Blue</div><div class="color-code">#C4D0CA</div><div class="color-var">--bm-hc-147-woodlawn-blue</div></div></div>
       </div>
     </section>
 
     <section data-category="grays">
       <h2 class="section-title">Grays</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-82-bennington-gray);"></div><div class="color-info"><div class="color-name">HC-82 Bennington Gray</div><div class="color-code">#a0a0a0</div><div class="color-var">--bm-hc-82-bennington-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-86-kingsport-gray);"></div><div class="color-info"><div class="color-name">HC-86 Kingsport Gray</div><div class="color-code">#a8a098</div><div class="color-var">--bm-hc-86-kingsport-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-87-ashley-gray);"></div><div class="color-info"><div class="color-name">HC-87 Ashley Gray</div><div class="color-code">#a8a8a0</div><div class="color-var">--bm-hc-87-ashley-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-94-old-salem-gray);"></div><div class="color-info"><div class="color-name">HC-94 Old Salem Gray</div><div class="color-code">#a8a8a0</div><div class="color-var">--bm-hc-94-old-salem-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-95-sag-harbor-gray);"></div><div class="color-info"><div class="color-name">HC-95 Sag Harbor Gray</div><div class="color-code">#989890</div><div class="color-var">--bm-hc-95-sag-harbor-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-96-richmond-gray);"></div><div class="color-info"><div class="color-name">HC-96 Richmond Gray</div><div class="color-code">#909088</div><div class="color-var">--bm-hc-96-richmond-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-97-hancock-gray);"></div><div class="color-info"><div class="color-name">HC-97 Hancock Gray</div><div class="color-code">#889090</div><div class="color-var">--bm-hc-97-hancock-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-101-hampshire-gray);"></div><div class="color-info"><div class="color-name">HC-101 Hampshire Gray</div><div class="color-code">#909890</div><div class="color-var">--bm-hc-101-hampshire-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-102-clarksville-gray);"></div><div class="color-info"><div class="color-name">HC-102 Clarksville Gray</div><div class="color-code">#889088</div><div class="color-var">--bm-hc-102-clarksville-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-103-cromwell-gray);"></div><div class="color-info"><div class="color-name">HC-103 Cromwell Gray</div><div class="color-code">#808880</div><div class="color-var">--bm-hc-103-cromwell-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-104-copley-gray);"></div><div class="color-info"><div class="color-name">HC-104 Copley Gray</div><div class="color-code">#788078</div><div class="color-var">--bm-hc-104-copley-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-105-rockport-gray);"></div><div class="color-info"><div class="color-name">HC-105 Rockport Gray</div><div class="color-code">#889898</div><div class="color-var">--bm-hc-105-rockport-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-106-crownsville-gray);"></div><div class="color-info"><div class="color-name">HC-106 Crownsville Gray</div><div class="color-code">#788080</div><div class="color-var">--bm-hc-106-crownsville-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-107-gettysburg-gray);"></div><div class="color-info"><div class="color-name">HC-107 Gettysburg Gray</div><div class="color-code">#888888</div><div class="color-var">--bm-hc-107-gettysburg-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-108-jockey-hollow-gray);"></div><div class="color-info"><div class="color-name">HC-108 Jockey Hollow Gray</div><div class="color-code">#808078</div><div class="color-var">--bm-hc-108-jockey-hollow-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-160-knoxville-gray);"></div><div class="color-info"><div class="color-name">HC-160 Knoxville Gray</div><div class="color-code">#A09D96</div><div class="color-var">--bm-hc-160-knoxville-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-161-templeton-gray);"></div><div class="color-info"><div class="color-name">HC-161 Templeton Gray</div><div class="color-code">#9A9A94</div><div class="color-var">--bm-hc-161-templeton-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-162-brewster-gray);"></div><div class="color-info"><div class="color-name">HC-162 Brewster Gray</div><div class="color-code">#8B8C86</div><div class="color-var">--bm-hc-162-brewster-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-163-duxbury-gray);"></div><div class="color-info"><div class="color-name">HC-163 Duxbury Gray</div><div class="color-code">#909090</div><div class="color-var">--bm-hc-163-duxbury-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-164-puritan-gray);"></div><div class="color-info"><div class="color-name">HC-164 Puritan Gray</div><div class="color-code">#A0A099</div><div class="color-var">--bm-hc-164-puritan-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-165-boothbay-gray);"></div><div class="color-info"><div class="color-name">HC-165 Boothbay Gray</div><div class="color-code">#8D9493</div><div class="color-var">--bm-hc-165-boothbay-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-166-kendall-charcoal);"></div><div class="color-info"><div class="color-name">HC-166 Kendall Charcoal</div><div class="color-code">#686868</div><div class="color-var">--bm-hc-166-kendall-charcoal</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-167-amherst-gray);"></div><div class="color-info"><div class="color-name">HC-167 Amherst Gray</div><div class="color-code">#989890</div><div class="color-var">--bm-hc-167-amherst-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-168-chelsea-gray);"></div><div class="color-info"><div class="color-name">HC-168 Chelsea Gray</div><div class="color-code">#A0A09A</div><div class="color-var">--bm-hc-168-chelsea-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-169-coventry-gray);"></div><div class="color-info"><div class="color-name">HC-169 Coventry Gray</div><div class="color-code">#a8a8a8</div><div class="color-var">--bm-hc-169-coventry-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-170-stonington-gray);"></div><div class="color-info"><div class="color-name">HC-170 Stonington Gray</div><div class="color-code">#c0c0c0</div><div class="color-var">--bm-hc-170-stonington-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-171-wickham-gray);"></div><div class="color-info"><div class="color-name">HC-171 Wickham Gray</div><div class="color-code">#c8c8c8</div><div class="color-var">--bm-hc-171-wickham-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-178-charcoal-slate);"></div><div class="color-info"><div class="color-name">HC-178 Charcoal Slate</div><div class="color-code">#5E5E5C</div><div class="color-var">--bm-hc-178-charcoal-slate</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-179-platinum-gray);"></div><div class="color-info"><div class="color-name">HC-179 Platinum Gray</div><div class="color-code">#C0C0C0</div><div class="color-var">--bm-hc-179-platinum-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-180-cliffside-gray);"></div><div class="color-info"><div class="color-name">HC-180 Cliffside Gray</div><div class="color-code">#908880</div><div class="color-var">--bm-hc-180-cliffside-gray</div></div></div>
         <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-190-black);"></div><div class="color-info"><div class="color-name">HC-190 Black</div><div class="color-code">#313132</div><div class="color-var">--bm-hc-190-black</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-178-charcoal-slate);"></div><div class="color-info"><div class="color-name">HC-178 Charcoal Slate</div><div class="color-code">#656769</div><div class="color-var">--bm-hc-178-charcoal-slate</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-160-knoxville-gray);"></div><div class="color-info"><div class="color-name">HC-160 Knoxville Gray</div><div class="color-code">#616C6C</div><div class="color-var">--bm-hc-160-knoxville-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-166-kendall-charcoal);"></div><div class="color-info"><div class="color-name">HC-166 Kendall Charcoal</div><div class="color-code">#676662</div><div class="color-var">--bm-hc-166-kendall-charcoal</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-167-amherst-gray);"></div><div class="color-info"><div class="color-name">HC-167 Amherst Gray</div><div class="color-code">#757671</div><div class="color-var">--bm-hc-167-amherst-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-161-templeton-gray);"></div><div class="color-info"><div class="color-name">HC-161 Templeton Gray</div><div class="color-code">#7A8586</div><div class="color-var">--bm-hc-161-templeton-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-163-duxbury-gray);"></div><div class="color-info"><div class="color-name">HC-163 Duxbury Gray</div><div class="color-code">#80867F</div><div class="color-var">--bm-hc-163-duxbury-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-168-chelsea-gray);"></div><div class="color-info"><div class="color-name">HC-168 Chelsea Gray</div><div class="color-code">#86847D</div><div class="color-var">--bm-hc-168-chelsea-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-162-brewster-gray);"></div><div class="color-info"><div class="color-name">HC-162 Brewster Gray</div><div class="color-code">#8C9696</div><div class="color-var">--bm-hc-162-brewster-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-164-puritan-gray);"></div><div class="color-info"><div class="color-name">HC-164 Puritan Gray</div><div class="color-code">#999F9B</div><div class="color-var">--bm-hc-164-puritan-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-179-platinum-gray);"></div><div class="color-info"><div class="color-name">HC-179 Platinum Gray</div><div class="color-code">#A8A9A3</div><div class="color-var">--bm-hc-179-platinum-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-165-boothbay-gray);"></div><div class="color-info"><div class="color-name">HC-165 Boothbay Gray</div><div class="color-code">#ABB2B0</div><div class="color-var">--bm-hc-165-boothbay-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-169-coventry-gray);"></div><div class="color-info"><div class="color-name">HC-169 Coventry Gray</div><div class="color-code">#B8BAB6</div><div class="color-var">--bm-hc-169-coventry-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-170-stonington-gray);"></div><div class="color-info"><div class="color-name">HC-170 Stonington Gray</div><div class="color-code">#CACBC5</div><div class="color-var">--bm-hc-170-stonington-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-180-cliffside-gray);"></div><div class="color-info"><div class="color-name">HC-180 Cliffside Gray</div><div class="color-code">#CDD0CA</div><div class="color-var">--bm-hc-180-cliffside-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-171-wickham-gray);"></div><div class="color-info"><div class="color-name">HC-171 Wickham Gray</div><div class="color-code">#D5D8D3</div><div class="color-var">--bm-hc-171-wickham-gray</div></div></div>
       </div>
     </section>
 
     <section data-category="neutrals">
-      <h2 class="section-title">Neutrals & Taupes</h2>
+      <h2 class="section-title">Neutrals, Taupes & Beiges</h2>
       <div class="color-grid">
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-45-shaker-beige);"></div><div class="color-info"><div class="color-name">HC-45 Shaker Beige</div><div class="color-code">#d4c0a0</div><div class="color-var">--bm-hc-45-shaker-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-76-davenport-tan);"></div><div class="color-info"><div class="color-name">HC-76 Davenport Tan</div><div class="color-code">#a89878</div><div class="color-var">--bm-hc-76-davenport-tan</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-77-alexandria-beige);"></div><div class="color-info"><div class="color-name">HC-77 Alexandria Beige</div><div class="color-code">#c8b8a8</div><div class="color-var">--bm-hc-77-alexandria-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-78-litchfield-gray);"></div><div class="color-info"><div class="color-name">HC-78 Litchfield Gray</div><div class="color-code">#a09888</div><div class="color-var">--bm-hc-78-litchfield-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-79-greenbrier-beige);"></div><div class="color-info"><div class="color-name">HC-79 Greenbrier Beige</div><div class="color-code">#b8a888</div><div class="color-var">--bm-hc-79-greenbrier-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-80-bleeker-beige);"></div><div class="color-info"><div class="color-name">HC-80 Bleeker Beige</div><div class="color-code">#c8b8a0</div><div class="color-var">--bm-hc-80-bleeker-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-81-manchester-tan);"></div><div class="color-info"><div class="color-name">HC-81 Manchester Tan</div><div class="color-code">#d0c0a8</div><div class="color-var">--bm-hc-81-manchester-tan</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-83-grant-beige);"></div><div class="color-info"><div class="color-name">HC-83 Grant Beige</div><div class="color-code">#c0b098</div><div class="color-var">--bm-hc-83-grant-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-85-fairview-taupe);"></div><div class="color-info"><div class="color-name">HC-85 Fairview Taupe</div><div class="color-code">#b8a898</div><div class="color-var">--bm-hc-85-fairview-taupe</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-89-northampton-putty);"></div><div class="color-info"><div class="color-name">HC-89 Northampton Putty</div><div class="color-code">#b8a890</div><div class="color-var">--bm-hc-89-northampton-putty</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-90-crown-point-sand);"></div><div class="color-info"><div class="color-name">HC-90 Crown Point Sand</div><div class="color-code">#c8b898</div><div class="color-var">--bm-hc-90-crown-point-sand</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-91-danville-tan);"></div><div class="color-info"><div class="color-name">HC-91 Danville Tan</div><div class="color-code">#c0a888</div><div class="color-var">--bm-hc-91-danville-tan</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-92-wheeling-neutral);"></div><div class="color-info"><div class="color-name">HC-92 Wheeling Neutral</div><div class="color-code">#c8b8a8</div><div class="color-var">--bm-hc-92-wheeling-neutral</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-93-carrington-beige);"></div><div class="color-info"><div class="color-name">HC-93 Carrington Beige</div><div class="color-code">#d4c0a8</div><div class="color-var">--bm-hc-93-carrington-beige</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-99-abingdon-putty);"></div><div class="color-info"><div class="color-name">HC-99 Abingdon Putty</div><div class="color-code">#d0c8b8</div><div class="color-var">--bm-hc-99-abingdon-putty</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-172-revere-pewter);"></div><div class="color-info"><div class="color-name">HC-172 Revere Pewter</div><div class="color-code">#c8c0b0</div><div class="color-var">--bm-hc-172-revere-pewter</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-173-edgecomb-gray);"></div><div class="color-info"><div class="color-name">HC-173 Edgecomb Gray</div><div class="color-code">#d4ccc0</div><div class="color-var">--bm-hc-173-edgecomb-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-174-lancaster-whitewash);"></div><div class="color-info"><div class="color-name">HC-174 Lancaster Whitewash</div><div class="color-code">#F0E8DC</div><div class="color-var">--bm-hc-174-lancaster-whitewash</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-175-briarwood);"></div><div class="color-info"><div class="color-name">HC-175 Briarwood</div><div class="color-code">#6E5C4E</div><div class="color-var">--bm-hc-175-briarwood</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-176-annapolis-gray);"></div><div class="color-info"><div class="color-name">HC-176 Annapolis Gray</div><div class="color-code">#9A9890</div><div class="color-var">--bm-hc-176-annapolis-gray</div></div></div>
-        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-177-richmond-bisque);"></div><div class="color-info"><div class="color-name">HC-177 Richmond Bisque</div><div class="color-code">#D8C8B0</div><div class="color-var">--bm-hc-177-richmond-bisque</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-85-fairview-taupe);"></div><div class="color-info"><div class="color-name">HC-85 Fairview Taupe</div><div class="color-code">#7A7163</div><div class="color-var">--bm-hc-85-fairview-taupe</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-103-cromwell-gray);"></div><div class="color-info"><div class="color-name">HC-103 Cromwell Gray</div><div class="color-code">#7E7768</div><div class="color-var">--bm-hc-103-cromwell-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-106-crownsville-gray);"></div><div class="color-info"><div class="color-name">HC-106 Crownsville Gray</div><div class="color-code">#857F6B</div><div class="color-var">--bm-hc-106-crownsville-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-76-davenport-tan);"></div><div class="color-info"><div class="color-name">HC-76 Davenport Tan</div><div class="color-code">#877866</div><div class="color-var">--bm-hc-76-davenport-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-101-hampshire-gray);"></div><div class="color-info"><div class="color-name">HC-101 Hampshire Gray</div><div class="color-code">#8F8974</div><div class="color-var">--bm-hc-101-hampshire-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-104-copley-gray);"></div><div class="color-info"><div class="color-name">HC-104 Copley Gray</div><div class="color-code">#908A7A</div><div class="color-var">--bm-hc-104-copley-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-86-kingsport-gray);"></div><div class="color-info"><div class="color-name">HC-86 Kingsport Gray</div><div class="color-code">#928676</div><div class="color-var">--bm-hc-86-kingsport-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-88-jamesboro-gold);"></div><div class="color-info"><div class="color-name">HC-88 Jamesboro Gold</div><div class="color-code">#94856A</div><div class="color-var">--bm-hc-88-jamesboro-gold</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-97-hancock-gray);"></div><div class="color-info"><div class="color-name">HC-97 Hancock Gray</div><div class="color-code">#948D73</div><div class="color-var">--bm-hc-97-hancock-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-107-gettysburg-gray);"></div><div class="color-info"><div class="color-name">HC-107 Gettysburg Gray</div><div class="color-code">#999686</div><div class="color-var">--bm-hc-107-gettysburg-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-175-briarwood);"></div><div class="color-info"><div class="color-name">HC-175 Briarwood</div><div class="color-code">#9F988B</div><div class="color-var">--bm-hc-175-briarwood</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-77-alexandria-beige);"></div><div class="color-info"><div class="color-name">HC-77 Alexandria Beige</div><div class="color-code">#A0937F</div><div class="color-var">--bm-hc-77-alexandria-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-94-old-salem-gray);"></div><div class="color-info"><div class="color-name">HC-94 Old Salem Gray</div><div class="color-code">#A29A7D</div><div class="color-var">--bm-hc-94-old-salem-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-87-ashley-gray);"></div><div class="color-info"><div class="color-name">HC-87 Ashley Gray</div><div class="color-code">#A39A8E</div><div class="color-var">--bm-hc-87-ashley-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-105-rockport-gray);"></div><div class="color-info"><div class="color-name">HC-105 Rockport Gray</div><div class="color-code">#A7A296</div><div class="color-var">--bm-hc-105-rockport-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-89-northampton-putty);"></div><div class="color-info"><div class="color-name">HC-89 Northampton Putty</div><div class="color-code">#A99D80</div><div class="color-var">--bm-hc-89-northampton-putty</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-98-providence-olive);"></div><div class="color-info"><div class="color-name">HC-98 Providence Olive</div><div class="color-code">#AAA185</div><div class="color-var">--bm-hc-98-providence-olive</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-108-jockey-hollow-gray);"></div><div class="color-info"><div class="color-name">HC-108 Jockey Hollow Gray</div><div class="color-code">#ADA899</div><div class="color-var">--bm-hc-108-jockey-hollow-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-102-clarksville-gray);"></div><div class="color-info"><div class="color-name">HC-102 Clarksville Gray</div><div class="color-code">#B0A993</div><div class="color-var">--bm-hc-102-clarksville-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-95-sag-harbor-gray);"></div><div class="color-info"><div class="color-name">HC-95 Sag Harbor Gray</div><div class="color-code">#B6AE98</div><div class="color-var">--bm-hc-95-sag-harbor-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-79-greenbrier-beige);"></div><div class="color-info"><div class="color-name">HC-79 Greenbrier Beige</div><div class="color-code">#B8AC91</div><div class="color-var">--bm-hc-79-greenbrier-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-91-danville-tan);"></div><div class="color-info"><div class="color-name">HC-91 Danville Tan</div><div class="color-code">#B8AC8C</div><div class="color-var">--bm-hc-91-danville-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-25-quincy-tan);"></div><div class="color-info"><div class="color-name">HC-25 Quincy Tan</div><div class="color-code">#BCAF90</div><div class="color-var">--bm-hc-25-quincy-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-82-bennington-gray);"></div><div class="color-info"><div class="color-name">HC-82 Bennington Gray</div><div class="color-code">#C0B69D</div><div class="color-var">--bm-hc-82-bennington-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-176-annapolis-gray);"></div><div class="color-info"><div class="color-name">HC-176 Annapolis Gray</div><div class="color-code">#C7BEB1</div><div class="color-var">--bm-hc-176-annapolis-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-28-shelburne-buff);"></div><div class="color-info"><div class="color-name">HC-28 Shelburne Buff</div><div class="color-code">#C7B591</div><div class="color-var">--bm-hc-28-shelburne-buff</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-172-revere-pewter);"></div><div class="color-info"><div class="color-name">HC-172 Revere Pewter</div><div class="color-code">#CAC6B9</div><div class="color-var">--bm-hc-172-revere-pewter</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-80-bleeker-beige);"></div><div class="color-info"><div class="color-name">HC-80 Bleeker Beige</div><div class="color-code">#CBC0AB</div><div class="color-var">--bm-hc-80-bleeker-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-92-wheeling-neutral);"></div><div class="color-info"><div class="color-name">HC-92 Wheeling Neutral</div><div class="color-code">#CBBFA3</div><div class="color-var">--bm-hc-92-wheeling-neutral</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-83-grant-beige);"></div><div class="color-info"><div class="color-name">HC-83 Grant Beige</div><div class="color-code">#CCC5B2</div><div class="color-var">--bm-hc-83-grant-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-90-crown-point-sand);"></div><div class="color-info"><div class="color-name">HC-90 Crown Point Sand</div><div class="color-code">#CCC3A7</div><div class="color-var">--bm-hc-90-crown-point-sand</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-96-richmond-gray);"></div><div class="color-info"><div class="color-name">HC-96 Richmond Gray</div><div class="color-code">#CDC7AD</div><div class="color-var">--bm-hc-96-richmond-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-45-shaker-beige);"></div><div class="color-info"><div class="color-name">HC-45 Shaker Beige</div><div class="color-code">#CEC2AA</div><div class="color-var">--bm-hc-45-shaker-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-78-litchfield-gray);"></div><div class="color-info"><div class="color-name">HC-78 Litchfield Gray</div><div class="color-code">#D3CABD</div><div class="color-var">--bm-hc-78-litchfield-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-99-abingdon-putty);"></div><div class="color-info"><div class="color-name">HC-99 Abingdon Putty</div><div class="color-code">#D5CEB4</div><div class="color-var">--bm-hc-99-abingdon-putty</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-26-monroe-bisque);"></div><div class="color-info"><div class="color-name">HC-26 Monroe Bisque</div><div class="color-code">#D6C9AC</div><div class="color-var">--bm-hc-26-monroe-bisque</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-177-richmond-bisque);"></div><div class="color-info"><div class="color-name">HC-177 Richmond Bisque</div><div class="color-code">#D6C7AA</div><div class="color-var">--bm-hc-177-richmond-bisque</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-173-edgecomb-gray);"></div><div class="color-info"><div class="color-name">HC-173 Edgecomb Gray</div><div class="color-code">#D8D3C5</div><div class="color-var">--bm-hc-173-edgecomb-gray</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-93-carrington-beige);"></div><div class="color-info"><div class="color-name">HC-93 Carrington Beige</div><div class="color-code">#D8D1BA</div><div class="color-var">--bm-hc-93-carrington-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-81-manchester-tan);"></div><div class="color-info"><div class="color-name">HC-81 Manchester Tan</div><div class="color-code">#D9D2BE</div><div class="color-var">--bm-hc-81-manchester-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-19-norwich-brown);"></div><div class="color-info"><div class="color-name">HC-19 Norwich Brown</div><div class="color-code">#928161</div><div class="color-var">--bm-hc-19-norwich-brown</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-20-woodstock-tan);"></div><div class="color-info"><div class="color-name">HC-20 Woodstock Tan</div><div class="color-code">#A0906F</div><div class="color-var">--bm-hc-20-woodstock-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-21-huntington-beige);"></div><div class="color-info"><div class="color-name">HC-21 Huntington Beige</div><div class="color-code">#B7A98B</div><div class="color-var">--bm-hc-21-huntington-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-23-yorkshire-tan);"></div><div class="color-info"><div class="color-name">HC-23 Yorkshire Tan</div><div class="color-code">#BDB190</div><div class="color-var">--bm-hc-23-yorkshire-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-34-wilmington-tan);"></div><div class="color-info"><div class="color-name">HC-34 Wilmington Tan</div><div class="color-code">#C7B189</div><div class="color-var">--bm-hc-34-wilmington-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-43-tyler-taupe);"></div><div class="color-info"><div class="color-name">HC-43 Tyler Taupe</div><div class="color-code">#AD9774</div><div class="color-var">--bm-hc-43-tyler-taupe</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-44-lenox-tan);"></div><div class="color-info"><div class="color-name">HC-44 Lenox Tan</div><div class="color-code">#BFAF92</div><div class="color-var">--bm-hc-44-lenox-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-46-jackson-tan);"></div><div class="color-info"><div class="color-name">HC-46 Jackson Tan</div><div class="color-code">#A58A6E</div><div class="color-var">--bm-hc-46-jackson-tan</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-47-brookline-beige);"></div><div class="color-info"><div class="color-name">HC-47 Brookline Beige</div><div class="color-code">#BCA78C</div><div class="color-var">--bm-hc-47-brookline-beige</div></div></div>
+        <div class="color-card"><div class="color-preview" style="background: var(--bm-hc-48-bradstreet-beige);"></div><div class="color-info"><div class="color-name">HC-48 Bradstreet Beige</div><div class="color-code">#CEBEA7</div><div class="color-var">--bm-hc-48-bradstreet-beige</div></div></div>
       </div>
     </section>
   </main>
