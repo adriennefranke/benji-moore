@@ -176,72 +176,72 @@
   /* ============================================
      HISTORICAL COLLECTION - HC-127 TO HC-140
      ============================================ */
-  --bm-hc-127-fairmont-green: #809080;
-  --bm-hc-128-clearspring-green: #90a090;
-  --bm-hc-129-southfield-green: #688068;
-  --bm-hc-130-webster-green: #708878;
-  --bm-hc-131-lehigh-green: #607060;
-  --bm-hc-132-harrisburg-green: #485848;
-  --bm-hc-133-yorktowne-green: #405040;
-  --bm-hc-134-tarrytown-green: #384838;
-  --bm-hc-135-lafayette-green: #506050;
-  --bm-hc-136-waterbury-green: #607860;
-  --bm-hc-137-mill-springs-blue: #708890;
-  --bm-hc-138-covington-blue: #8098a0;
-  --bm-hc-139-salisbury-green: #708878;
-  --bm-hc-140-prescott-green: #607060;
+  --bm-hc-127-fairmont-green: #6A836B;
+  --bm-hc-128-clearspring-green: #7D9982;
+  --bm-hc-129-southfield-green: #8EAA95;
+  --bm-hc-130-webster-green: #6A7F6E;
+  --bm-hc-131-lehigh-green: #7B947F;
+  --bm-hc-132-harrisburg-green: #91AA99;
+  --bm-hc-133-yorktowne-green: #4A595C;
+  --bm-hc-134-tarrytown-green: #455652;
+  --bm-hc-135-lafayette-green: #4D5F56;
+  --bm-hc-136-waterbury-green: #749087;
+  --bm-hc-137-mill-springs-blue: #84A09A;
+  --bm-hc-138-covington-blue: #9AB4AC;
+  --bm-hc-139-salisbury-green: #B2BAA6;
+  --bm-hc-140-prescott-green: #C0C9B9;
   
   /* ============================================
      HISTORICAL COLLECTION - HC-141 TO HC-147
      ============================================ */
-  --bm-hc-141-hollingsworth-green: #688878;
-  --bm-hc-142-stratton-blue: #607078;
-  --bm-hc-143-wythe-blue: #a8b8b8;
-  --bm-hc-144-palladian-blue: #b8c8c8;
-  --bm-hc-145-van-courtland-blue: #708090;
-  --bm-hc-146-wedgewood-gray: #788888;
-  --bm-hc-147-woodlawn-blue: #90a0a8;
+  --bm-hc-141-hollingsworth-green: #CDD4C5;
+  --bm-hc-142-stratton-blue: #97A8A0;
+  --bm-hc-143-wythe-blue: #AEBDB5;
+  --bm-hc-144-palladian-blue: #C4D1C9;
+  --bm-hc-145-van-courtland-blue: #89989D;
+  --bm-hc-146-wedgewood-gray: #B0BEBD;
+  --bm-hc-147-woodlawn-blue: #C4D0CA;
   --bm-hc-148-jamestown-blue: #889FA5;
   --bm-hc-149-buxton-blue: #A2B5B9;
-  --bm-hc-150-yarmouth-blue: #a0b8c0;
-  --bm-hc-151-buckland-blue: #708898;
-  --bm-hc-152-whipple-blue: #8898a0;
-  --bm-hc-153-marlboro-blue: #607080;
-  --bm-hc-154-hale-navy: #384858;
-  --bm-hc-155-newburyport-blue: #405868;
-  --bm-hc-156-van-deusen-blue: #405060;
-  --bm-hc-157-narragansett-green: #5A6B5E;
-  --bm-hc-158-newburg-green: #5B6B5A;
-  --bm-hc-159-philipsburg-blue: #6E8085;
+  --bm-hc-150-yarmouth-blue: #B9C7C9;
+  --bm-hc-151-buckland-blue: #698595;
+  --bm-hc-152-whipple-blue: #7E9DAE;
+  --bm-hc-153-marlboro-blue: #9CB8C4;
+  --bm-hc-154-hale-navy: #444B55;
+  --bm-hc-155-newburyport-blue: #495564;
+  --bm-hc-156-van-deusen-blue: #4C5A6C;
+  --bm-hc-157-narragansett-green: #465154;
+  --bm-hc-158-newburg-green: #485861;
+  --bm-hc-159-philipsburg-blue: #667784;
   
   /* ============================================
      HISTORICAL COLLECTION - GRAYS
      ============================================ */
-  --bm-hc-160-knoxville-gray: #A09D96;
-  --bm-hc-161-templeton-gray: #9A9A94;
-  --bm-hc-162-brewster-gray: #8B8C86;
-  --bm-hc-163-duxbury-gray: #909090;
-  --bm-hc-164-puritan-gray: #A0A099;
-  --bm-hc-165-boothbay-gray: #8D9493;
-  --bm-hc-166-kendall-charcoal: #686868;
-  --bm-hc-167-amherst-gray: #989890;
-  --bm-hc-168-chelsea-gray: #A0A09A;
-  --bm-hc-169-coventry-gray: #a8a8a8;
-  --bm-hc-170-stonington-gray: #c0c0c0;
-  --bm-hc-171-wickham-gray: #c8c8c8;
+  --bm-hc-160-knoxville-gray: #616C6C;
+  --bm-hc-161-templeton-gray: #7A8586;
+  --bm-hc-162-brewster-gray: #8C9696;
+  --bm-hc-163-duxbury-gray: #80867F;
+  --bm-hc-164-puritan-gray: #999F9B;
+  --bm-hc-165-boothbay-gray: #ABB2B0;
+  --bm-hc-166-kendall-charcoal: #676662;
+  --bm-hc-167-amherst-gray: #757671;
+  --bm-hc-168-chelsea-gray: #86847D;
+  --bm-hc-169-coventry-gray: #B8BAB6;
+  --bm-hc-170-stonington-gray: #CACBC5;
+  --bm-hc-171-wickham-gray: #D5D8D3;
   
   /* ============================================
      HISTORICAL COLLECTION - NEUTRALS & TAUPES
      ============================================ */
-  --bm-hc-172-revere-pewter: #c8c0b0;
-  --bm-hc-173-edgecomb-gray: #d4ccc0;
-  --bm-hc-174-lancaster-whitewash: #F0E8DC;
-  --bm-hc-175-briarwood: #6E5C4E;
-  --bm-hc-176-annapolis-gray: #9A9890;
-  --bm-hc-177-richmond-bisque: #D8C8B0;
-  --bm-hc-178-charcoal-slate: #5E5E5C;
-  --bm-hc-179-platinum-gray: #C0C0C0;
-  --bm-hc-180-cliffside-gray: #908880;
+  --bm-hc-172-revere-pewter: #CAC6B9;
+  --bm-hc-173-edgecomb-gray: #D8D3C5;
+  --bm-hc-174-lancaster-whitewash: #E5E1CD;
+  --bm-hc-175-briarwood: #9F988B;
+  --bm-hc-176-annapolis-gray: #C7BEB1;
+  --bm-hc-177-richmond-bisque: #D6C7AA;
+  --bm-hc-178-charcoal-slate: #656769;
+  --bm-hc-179-platinum-gray: #A8A9A3;
+  --bm-hc-180-cliffside-gray: #CDD0CA;
   
   /* ============================================
      HISTORICAL COLLECTION - DEEP TONES
@@ -254,7 +254,7 @@
   --bm-hc-186-charleston-brown: #6F533D;
   --bm-hc-187-black-forest-green: #262E2C;
   --bm-hc-188-essex-green: #2A362F;
-  --bm-hc-189-chrome-green: #1D402F;
+  --bm-hc-189-chrome-green: #1C3E2E;
   --bm-hc-190-black: #313132;
   --bm-hc-191-hamilton-blue: #64757E;
 
